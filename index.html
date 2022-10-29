@@ -7,92 +7,139 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
-<title>Gymnasium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+
+<title>Gymnasium </title>
     <style>
         body{
             margin: 0px;
             padding: 0px;
-            background: url('image/adult-gfaab32569_1920.jpg');
             background-repeat: no-repeat;
             background-position-x: left;
             background-size: cover;
             color: white;
             font-family: 'Baloo Bhai 2', cursive;
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            height: 100%;
+}
 
-        }
+       
+body:before {
+    content: "";
+    position: absolute;
+    background: url('image/adult-gfaab32569_1920.jpg') ;
+    background-size: cover;
+    z-index: -1; 
+    height: 100%; width: 100%; 
+    transform-origin: top left;
+    filter: blur(2px);
+}
         .left{
             /* border:2px solid red; */
             display: inline-block;
-            
             position: absolute;
             top:20px;
-            left:70px;
+            left:65px;
+            font-family: 'Covered By Your Grace', cursive;
+
+           
         }
         .left span{
-            font-size: 40px;
+            font-size: 50px;
             color: orange;
         }
         .left img{
             width: 64px;
-    height: 88px;
-    filter: invert(100%);
-    padding: 5px 25px;
+            height: 88px;
+            filter: invert(100%);
+            padding: 5px 25px;
+
 
         }
         .left div{
             text-align: left;
-            font-size: 20px;
-            line-height: 15px;
+            font-size: 21px;
+            line-height: 10px;
+        }
+        .middle{
+            display:block;
+            width:35%;
+            height:40px;
+            position :absolute;
+            top: 167px;
+            left: 30px;
+            margin:30px 10px;
+            padding: 20px 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 50px;
+            letter-spacing: 7px;
+
+        }
+        .middle span{
+            color: orange;
+            font-weight:700;
         }
         .mid{
             display: block;
-            margin:20px auto;
-            width:34%;
-            border:2px solid yellowgreen;
+            margin:35px auto;
+            width:40%;
+            /* border:2px solid yellowgreen; */
             
 
         }
+
         .navbar li{
             display: inline-block;
-             font-size: 17px;
         }
         .navbar li a{
             color: white;
             text-decoration: none;
-            padding: 20px 16px;
+            padding: 20px 17px;
+            font-size: 18px;
+
+
         }
         .navbar li a:hover, .navbar li a:active {
             text-decoration: underline;
-            color: grey;
+            color: rgb(255, 184, 52);
         }
         .right{
-            border:2px solid green;
+            /* border:2px solid green; */
             display:inline-block;
             position: absolute;
             right: 46px;
-            top:20px;
+            top:26px;
         }
         .btn{
             margin:0px 9px;
             border-radius: 10px;
             padding: 4px 14px;
-            background-color: black;
+            background-color:orange;
             color:white;
             font-size: 15px;
             cursor: pointer;
             font-family: 'Baloo Bhai 2', cursive;
         }
         .btn:hover {
-            background-color: orange;
+            background-color: rgb(253, 189, 69);
         }
-/* This is the container for form  */
         .container{
             position:absolute;
             right: 44px;
     border: 2px solid #fcfcfc;
-    margin: 201px 8px;
-    padding: 0px 30px;
+    margin: 209px 8px;
+    padding: 2px 29px;    
     width: 31%;
+    height: 414px;
     border-radius: 24px;
         }
         .form-group input{
@@ -109,18 +156,20 @@
         .container h1{
             text-align: center;
             padding-left: 2px;
-            line-height: 95px;
+            line-height: 78px;
             font-size: 30px;
         }
-        .form-group btn{
-
+        .container .btn{
+             display: block;
+             width:25%;
+             margin :12px auto;
+             font-size: 16px;
         }
 
-        
-        
     </style>
 </head>
 <body>
+    
     <header class="header">
     <div class="left">
      <img src="image/woman-g409ad72c7_1280.png" alt="">
@@ -132,7 +181,7 @@
         <li><a href="#">About Us</a></li>
         <li><a href="#">Fitness Calculator</a></li>
         <li><a href="#">Contact Us</a></li>
-      </ul>   
+      </ul>  
     </div>
     <div class="right">
         <button class="btn">Call Us Now</button>
@@ -140,6 +189,9 @@
 
     </div>
 </header>
+<div class="middle">
+    ARE  YOU <br> <span>READY&nbsp;TO</span>&nbsp;CHANGE?
+</div>
 <div class="container">
     <h1>Join the best gym of your city now!</h1>
     <form action="noaction.php">
@@ -155,9 +207,13 @@
         <div class="form-group">
             <input type="text" placeholder="Enter your address">
         </div>
+        <div class="form-group">
+            <input type="text" placeholder="Enter your phone number">
+        </div>
        
         <button class="btn">Submit Now</button>
     </form>
 </div>
+
 </body>
 </html>
